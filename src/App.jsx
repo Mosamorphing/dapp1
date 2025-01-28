@@ -3,7 +3,6 @@ import { ethers } from "ethers";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import abi from "./abi.json";
-import "./App.css";
 
 const App = () => {
   const [currentBalance, setCurrentBalance] = useState("0");
@@ -89,10 +88,24 @@ const App = () => {
   }
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h1>Mini dApp - ETH Manager</h1>
-      <div>
-        <p>
+    <div style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100vh",
+      fontFamily: "Arial, sans-serif",
+      textAlign: "center",
+      backgroundColor: "#f4f4f9"
+    }}>
+      <div style={{
+        padding: "30px",
+        border: "1px solid #ccc",
+        borderRadius: "8px",
+        backgroundColor: "white",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)"
+      }}>
+        <h1 style={{ fontSize: "2.5rem", marginBottom: "20px" }}>Mini dApp - ETH Manager</h1>
+        <p style={{ fontSize: "1.5rem", marginBottom: "20px" }}>
           <strong>Current Contract Balance:</strong> {currentBalance} ETH
         </p>
         <div>
@@ -101,8 +114,29 @@ const App = () => {
             placeholder="Deposit Amount in ETH"
             value={depositAmount}
             onChange={(e) => setDepositAmount(e.target.value)}
+            style={{
+              fontSize: "1.2rem",
+              padding: "10px",
+              margin: "10px 0",
+              border: "1px solid #ccc",
+              borderRadius: "5px"
+            }}
           />
-          <button onClick={handleDeposit}>Deposit</button>
+          <button
+            onClick={handleDeposit}
+            style={{
+              fontSize: "1.2rem",
+              padding: "10px 20px",
+              border: "none",
+              borderRadius: "5px",
+              backgroundColor: "#007bff",
+              color: "white",
+              cursor: "pointer",
+              margin: "5px"
+            }}
+          >
+            Deposit
+          </button>
         </div>
         <div>
           <input
@@ -110,10 +144,45 @@ const App = () => {
             placeholder="Withdraw Amount in ETH"
             value={withdrawAmount}
             onChange={(e) => setWithdrawAmount(e.target.value)}
+            style={{
+              fontSize: "1.2rem",
+              padding: "10px",
+              margin: "10px 0",
+              border: "1px solid #ccc",
+              borderRadius: "5px"
+            }}
           />
-          <button onClick={handleWithdraw}>Withdraw</button>
+          <button
+            onClick={handleWithdraw}
+            style={{
+              fontSize: "1.2rem",
+              padding: "10px 20px",
+              border: "none",
+              borderRadius: "5px",
+              backgroundColor: "#007bff",
+              color: "white",
+              cursor: "pointer",
+              margin: "5px"
+            }}
+          >
+            Withdraw
+          </button>
         </div>
-        <button onClick={getBalance}>Refresh Balance</button>
+        <button
+          onClick={getBalance}
+          style={{
+            fontSize: "1.2rem",
+            padding: "10px 20px",
+            border: "none",
+            borderRadius: "5px",
+            backgroundColor: "#007bff",
+            color: "white",
+            cursor: "pointer",
+            margin: "5px"
+          }}
+        >
+          Refresh Balance
+        </button>
       </div>
       <ToastContainer />
     </div>
