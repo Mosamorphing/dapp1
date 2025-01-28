@@ -1,8 +1,11 @@
-# React + Vite
+# dApp1 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A decentralized application (dApp) to interact with the functions of an assessment smart contract deployed on the Sepolia testnet.
 
-Currently, two official plugins are available:
+## Deployment environment
+- **IDE**: Remix
+- **Environment**: Injected Provider - Metamask
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Contract Details
+- **Contract Address**: `0x019A352830936343C3c34A7df5511fa663fC19c5`
+- **Network**: Sepolia
